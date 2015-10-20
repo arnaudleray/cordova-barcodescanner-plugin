@@ -43,7 +43,7 @@ namespace WPCordovaClassLib.Cordova.Commands
                 }
 
                 root.Navigated += this.OnNavigated;
-                root.Navigate(new Uri("/Plugins/com.phonegap.plugins.barcodescanner/BarcodeScannerUI.xaml", UriKind.Relative));
+                root.Navigate(new Uri("/Plugins/cordova-plugin-barcodescanner-erdfamc/BarcodeScannerUI.xaml", UriKind.Relative));
             });
         }
 
