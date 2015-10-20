@@ -302,7 +302,7 @@ parentViewController:(UIViewController*)parentViewController
     }
 }
 
-
+/*
 - (void)flipCamera
 {
     self.isFlipped = YES;
@@ -310,6 +310,7 @@ parentViewController:(UIViewController*)parentViewController
     [self performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
     [self performSelector:@selector(scanBarcode) withObject:nil afterDelay:0.1];
 }
+*/
 
 //--------------------------------------------------------------------------
 - (NSString*)setUpCaptureSession {
@@ -707,10 +708,12 @@ parentViewController:(UIViewController*)parentViewController
     [self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
 }
 
+/*
 - (void)flipCameraButtonPressed:(id)sender
 {
     [self.processor performSelector:@selector(flipCamera) withObject:nil afterDelay:0];
 }
+*/
 
 //--------------------------------------------------------------------------
 - (UIView *)buildOverlayViewFromXib
@@ -756,13 +759,14 @@ parentViewController:(UIViewController*)parentViewController
                     target:nil
                     action:nil
                     ];
-    
+
+/*
     id flipCamera = [[[UIBarButtonItem alloc] autorelease]
                      initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
                      target:(id)self
                      action:@selector(flipCameraButtonPressed:)
                      ];
-    
+*/
     
 #if USE_SHUTTER
     id shutterButton = [[UIBarButtonItem alloc]
@@ -771,9 +775,9 @@ parentViewController:(UIViewController*)parentViewController
                         action:@selector(shutterButtonPressed)
                         ];
     
-    toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace, flipCamera ,shutterButton,nil];
+    toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace/*,flipCamera*/,shutterButton,nil];
 #else
-    toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace, flipCamera,nil];
+    toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace/*,flipCamera*/,nil];
 #endif
     bounds = overlayView.bounds;
     
